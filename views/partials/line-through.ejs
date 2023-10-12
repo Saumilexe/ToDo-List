@@ -1,0 +1,18 @@
+<script>
+    const checkedBoxes = document.querySelectorAll(".form-check-input");
+
+    checkedBoxes.forEach((checkbox, index) => {
+
+      checkbox.addEventListener("change",() => { 
+        const textElement = document.getElementById(`text${index}`);
+        if (checkbox.checked) {
+          textElement.style.textDecoration = "line-through";
+          textElement.style.color = "grey";
+        }
+        else {
+          textElement.style.textDecoration = "none";
+          textElement.style.color = "black";
+        }
+      })
+    });
+  </script>

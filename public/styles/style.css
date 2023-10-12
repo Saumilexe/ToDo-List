@@ -1,0 +1,44 @@
+body {
+    background-color: beige;
+}
+
+h1 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+}
+
+.h1Tag {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    color: darkgreen;
+    border-radius: 1rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    width: 100%;
+}
+
+.form > form {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.fs-4 {
+    color: green;
+}
+
+#newForm {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex: 0.47;
+}
