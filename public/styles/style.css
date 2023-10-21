@@ -1,3 +1,16 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
 body {
     background-color: beige;
 }
@@ -22,6 +35,10 @@ h1 {
     flex-direction: column;
 }
 
+.box > .d-flex {
+    width: 60%;
+}
+
 .form {
     width: 100%;
 }
@@ -40,5 +57,17 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    flex: 0.47;
+    flex: 0.5;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .box > .d-flex {
+        width: 100%;
+    }
+    #newForm {
+        flex: 0.8;
+    }
 }

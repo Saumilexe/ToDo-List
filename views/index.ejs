@@ -4,15 +4,17 @@
     <h1> <div class="h1Tag"><%= today %></div></h1>
     <div class="box">
     <!--Bootstrap for list of tasks-->
-    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center" style="width: 60%;">
-        <div class="list-group" style="width: 100%;">
+    <div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center" >
+        <div class="list-group fade-in" style="width: 100%;">
             <% for (i = 0; i < taskArray.length; i++) { %>
-          <label class="list-group-item d-flex gap-3">
-            <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-            <span id="text<%= i %>" class="pt-1 form-checked-content">
-              <strong><%= taskArray[i] %> </strong>
-            </span>
-          </label>
+            <label class="list-group-item d-flex gap-3">
+              <form action="/delete" method="post">
+                <input class="form-check-input flex-shrink-0" type="checkbox" name="checkbox" value="<%= taskArray[i].id %>" style="font-size: 1.375em;" onChange="this.form.submit()">
+              </form>
+              <span id="text<%= i %>" class="pt-1 form-checked-content">
+                <strong><%= taskArray[i].name %> </strong>
+              </span>
+            </label>
           <% } %>
         </div>
       </div>

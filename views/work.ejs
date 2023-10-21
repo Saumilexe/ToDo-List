@@ -7,9 +7,11 @@
             <div class="list-group" style="width: 100%;">
                 <% for (i = 0; i < workArray.length; i++) { %>
               <label class="list-group-item d-flex gap-3">
-                <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+                <form action="/workDelete" method="post">
+                <input class="form-check-input flex-shrink-0" type="checkbox" name="checkbox" value="<%= workArray[i].id %>" style="font-size: 1.375em;" onChange="this.form.submit()">
+                </form>
                 <span id="text<%= i %>" class="pt-1 form-checked-content">
-                  <strong><%= workArray[i] %> </strong>
+                  <strong><%= workArray[i].name %> </strong>
                 </span>
               </label>
               <% } %>
