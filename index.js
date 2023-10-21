@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     let date = new Date();
     let options = { month: 'long' };
     let month = date.toLocaleString('en-US', options); 
-    let today = `${weekday[date.getDay()]}, ${month} ${date.getDay()} `;
+    let today = `${weekday[date.getDay()]}, ${month} ${date.getDate()} `;
     
     res.render("index.ejs", {taskArray: taskArray, today: today});
 });
